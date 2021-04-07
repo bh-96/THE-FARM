@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/section4main"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="kangwon.cs.capstone.Section4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:background="#77aaaaaa"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/progressLayout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textHunger"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="포만감"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barHunger"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textActive"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Active"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barActive"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progressLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textHappiness"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="행복"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barHappiness"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textStress"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="스트레스"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barStress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progressLayout3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/textHealth"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="건강"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barHealth"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textExperience"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="경험치"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/barExperience"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btActivity1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="부스러기"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/produce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/no" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btActivity9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity13"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7" />
+
+                <Button
+                    android:id="@+id/btActivity14"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btActivity16"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="onActivityClicked"
+                    android:text="Button"
+                    android:textColor="@android:color/transparent"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="name"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#77aaaaaa"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btHand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bthand_state"
+            android:onClick="onHandClicked" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/btFood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btfood_state"
+            android:onClick="onFoodClicked"
+            android:textColor="@android:color/transparent"
+            android:textColorLink="@color/colorAccent" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/btSnack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btsnack_state"
+            android:onClick="onSnackClicked" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/btGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btgame_state"
+            android:onClick="onGame" />
+
+    </LinearLayout>
+
+</LinearLayout>

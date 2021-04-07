@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_back"
+    tools:context="kangwon.cs.capstone.Section3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="338dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/menu_ch" />
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="70dp"
+            android:background="#00aec941"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/crop1"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/n_1"
+                android:gravity="bottom|center"
+                android:textOff="양파"
+                android:textOn="선택" />
+
+            <ToggleButton
+                android:id="@+id/crop2"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/n_2"
+                android:gravity="bottom|center"
+                android:textOff="마늘"
+                android:textOn="선택" />
+
+            <ToggleButton
+                android:id="@+id/crop3"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/n_3"
+                android:gravity="bottom|center"
+                android:textOff="버섯"
+                android:textOn="선택" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/text"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="캐릭터 이름"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btCreate"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:onClick="onCreate"
+            app:srcCompat="@drawable/bt_select" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

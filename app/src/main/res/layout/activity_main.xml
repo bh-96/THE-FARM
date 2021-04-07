@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    tools:context="kangwon.cs.capstone.MainActivity">
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="360dp" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/text"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="캐릭터 이름"
+                android:inputType="textPersonName" />
+
+            <CheckBox
+                android:id="@+id/chk"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:onClick="CheckBoxClicked"
+                android:text="저장"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btStart"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:onClick="onStart"
+            app:srcCompat="@drawable/bt_start" />
+
+        <ImageButton
+            android:id="@+id/btHow"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/transparent"
+            android:onClick="onHow"
+            app:srcCompat="@drawable/bt_how" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    tools:context="kangwon.cs.capstone.Game_menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:onClick="onBack"
+                app:srcCompat="@drawable/bt_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="160dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ImageButton
+                android:id="@+id/btAlone"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onAlone"
+                app:srcCompat="@drawable/bt_alone" />
+
+            <ImageButton
+                android:id="@+id/btTogether"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onTogether"
+                app:srcCompat="@drawable/bt_together" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

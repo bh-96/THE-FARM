@@ -29,7 +29,7 @@ public class Game_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_menu);
 
-        new JSONTask().execute("http://114.70.234.153:3000/game");  //wait=2
+        new JSONTask().execute(Constants.IP_ADDRESS + "/game");  //wait=2
     }
 
     public void onAlone(View v) {

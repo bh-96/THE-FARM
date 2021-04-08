@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         } else {
-            new JSONTask().execute("http://114.70.234.153:3000/main");//AsyncTask 시작시킴
+            new JSONTask().execute(Constants.IP_ADDRESS + "/main");//AsyncTask 시작시킴
         }
     }
 
@@ -195,47 +195,49 @@ public class MainActivity extends AppCompatActivity {
         public void onPostExecute(String result) {
             super.onPostExecute(result);
 
-            if (result.equals("delete")) {
-                Toast.makeText(getApplicationContext(), "삭제되었습니다.", Toast.LENGTH_SHORT).show();
-                user.setText("");
-            } else if (result.equals("0")){
-                Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
-                user.setText("");
-            } else{
-                StringTokenizer st = new StringTokenizer(result, ",");
-                String Hunger = st.nextToken();
-                String Happiness = st.nextToken();
-                String Health = st.nextToken();
-                String Active = st.nextToken();
-                String Stress = st.nextToken();
-                String Experience = st.nextToken();
-                String EndTime = st.nextToken();
+            if (result != null) {
+                if (result.equals("delete")) {
+                    Toast.makeText(getApplicationContext(), "삭제되었습니다.", Toast.LENGTH_SHORT).show();
+                    user.setText("");
+                } else if (result.equals("0")){
+                    Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+                    user.setText("");
+                } else{
+                    StringTokenizer st = new StringTokenizer(result, ",");
+                    String Hunger = st.nextToken();
+                    String Happiness = st.nextToken();
+                    String Health = st.nextToken();
+                    String Active = st.nextToken();
+                    String Stress = st.nextToken();
+                    String Experience = st.nextToken();
+                    String EndTime = st.nextToken();
 
-                State.getInstance().setStateHunger(Integer.parseInt(Hunger));
-                State.getInstance().setStateHappiness(Integer.parseInt(Happiness));
-                State.getInstance().setStateHealth(Integer.parseInt(Health));
-                State.getInstance().setStateActive(Integer.parseInt(Active));
-                State.getInstance().setStateStress(Integer.parseInt(Stress));
-                State.getInstance().setStateExperience(Integer.parseInt(Experience));
-                State.getInstance().setEndTime(Long.parseLong(EndTime));
+                    State.getInstance().setStateHunger(Integer.parseInt(Hunger));
+                    State.getInstance().setStateHappiness(Integer.parseInt(Happiness));
+                    State.getInstance().setStateHealth(Integer.parseInt(Health));
+                    State.getInstance().setStateActive(Integer.parseInt(Active));
+                    State.getInstance().setStateStress(Integer.parseInt(Stress));
+                    State.getInstance().setStateExperience(Integer.parseInt(Experience));
+                    State.getInstance().setEndTime(Long.parseLong(EndTime));
 
-                SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor = pref.edit();
+                    SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
 
-                editor.putInt("stateHunger",Integer.parseInt(Hunger));
-                editor.putInt("stateHappiness",Integer.parseInt(Happiness));
-                editor.putInt("stateHealth",Integer.parseInt(Health));
-                editor.putInt("stateActive",Integer.parseInt(Active));
-                editor.putInt("stateStress",Integer.parseInt(Stress));
-                editor.putInt("stateExperience",Integer.parseInt(Experience));
+                    editor.putInt("stateHunger",Integer.parseInt(Hunger));
+                    editor.putInt("stateHappiness",Integer.parseInt(Happiness));
+                    editor.putInt("stateHealth",Integer.parseInt(Health));
+                    editor.putInt("stateActive",Integer.parseInt(Active));
+                    editor.putInt("stateStress",Integer.parseInt(Stress));
+                    editor.putInt("stateExperience",Integer.parseInt(Experience));
 
-                editor.commit();
+                    editor.commit();
 
-                Intent intent = new Intent(getApplicationContext(), Section4.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(), Section4.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
 
-                finish();
+                    finish();
+                }
             }
         }
     }

@@ -105,7 +105,7 @@ public class Section3 extends AppCompatActivity {
             Toast t = Toast.makeText(this, "작물을 선택하세요.", Toast.LENGTH_SHORT);
             t.show();
         }else{
-            new JSONTask().execute("http://114.70.234.153:3000/sec3");//AsyncTask 시작시킴
+            new JSONTask().execute(Constants.IP_ADDRESS + "/sec3");//AsyncTask 시작시킴
         }
     }
 

@@ -27,7 +27,7 @@ public class Alone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alone);
 
-        new JSONTask().execute("http://114.70.234.153:3000/alone");  //wait=3
+        new JSONTask().execute(Constants.IP_ADDRESS + "/alone");  //wait=3
     }
 
     public void on1to50(View view){
@@ -62,7 +62,7 @@ public class Alone extends AppCompatActivity {
     public void onPause() {
         super.onPause();
 
-        new JSONTask().execute("http://114.70.234.153:3000/main");  //wait=0
+        new JSONTask().execute(Constants.IP_ADDRESS + "/main");  //wait=0
     }
 
     public class JSONTask extends AsyncTask<String, String, String> {

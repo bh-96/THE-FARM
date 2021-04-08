@@ -8,11 +8,11 @@ var hunger, happiness, health, active, stress, experience, rst, rst_to, medal;
 
 // DATABASE SETTING
 var connection = mysql.createConnection({
-    host     : '114.70.234.153',
+    host     : 'localhost',
     port     : 3306,    
-    user     : 'capstone',
-    password : '1234',
-    database : 'capstone'
+    user     : 'devuser',
+    password : 'Thefarm!1',
+    database : 'THE_FARM_OLD'
 });
 
 connection.connect();

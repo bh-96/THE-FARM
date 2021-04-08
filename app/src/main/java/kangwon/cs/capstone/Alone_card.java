@@ -120,7 +120,7 @@ public class Alone_card extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alone_card);
-        new JSONTask().execute("http://114.70.234.153:3000/alone");  //wait=3
+        new JSONTask().execute(Constants.IP_ADDRESS + "/alone");  //wait=3
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -256,7 +256,7 @@ public class Alone_card extends AppCompatActivity {
                     findViewById(cardId[j]).setEnabled(false);
                 }
                 rlt.setSave_result("FALSE");
-                new JSONTask().execute("http://114.70.234.153:3000/result");  //기록 저장
+                new JSONTask().execute(Constants.IP_ADDRESS + "/result");  //기록 저장
                 exit_btn.setClickable(true);
                 exit_btn.setVisibility(View.VISIBLE);
                 return;
@@ -268,7 +268,7 @@ public class Alone_card extends AppCompatActivity {
                 sound_pool.play(bomb_bgm, 1.0f, 1.0f, 1, 0, 1.0f);
                 Msg = "WIN! 이겼어요!";
                 rlt.setSave_result("TRUE");
-                new JSONTask().execute("http://114.70.234.153:3000/result");  //기록 저장
+                new JSONTask().execute(Constants.IP_ADDRESS + "/result");  //기록 저장
                 exit_btn.setClickable(true);
                 exit_btn.setVisibility(View.VISIBLE);
                 return;

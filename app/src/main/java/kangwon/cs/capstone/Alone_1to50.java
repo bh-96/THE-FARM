@@ -91,7 +91,7 @@ public class Alone_1to50 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alone_1to50);
-        new JSONTask().execute("http://114.70.234.153:3000/alone");  //wait=3
+        new JSONTask().execute(Constants.IP_ADDRESS + "/alone");  //wait=3
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -243,7 +243,7 @@ public class Alone_1to50 extends AppCompatActivity {
                     findViewById(btnId[j]).setClickable(false);
                 }
                 rlt.setSave_result("FALSE");
-                new JSONTask().execute("http://114.70.234.153:3000/result");  //기록 저장
+                new JSONTask().execute(Constants.IP_ADDRESS + "/result");  //기록 저장
                 exit_btn.setClickable(true);
                 exit_btn.setVisibility(View.VISIBLE);
                 //endThread();//progress dialog
@@ -256,7 +256,7 @@ public class Alone_1to50 extends AppCompatActivity {
                 sound_pool.play(bomb_bgm, 1.0f, 1.0f, 1, 0, 1.0f);
                 Msg = "WIN! 이겼어요!";
                 rlt.setSave_result("TRUE");
-                new JSONTask().execute("http://114.70.234.153:3000/result");  //기록 저장
+                new JSONTask().execute(Constants.IP_ADDRESS + "/result");  //기록 저장
                 exit_btn.setClickable(true);
                 exit_btn.setVisibility(View.VISIBLE);
                 //endThread();//progress dialog

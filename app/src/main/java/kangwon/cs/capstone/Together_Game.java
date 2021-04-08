@@ -77,7 +77,7 @@ public class Together_Game extends AppCompatActivity implements SensorEventListe
         setContentView(R.layout.activity_together_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        new JSONTask().execute("http://114.70.234.153:3000/together");  //wait=4
+        new JSONTask().execute(Constants.IP_ADDRESS + "/together");  //wait=4
 
         timeRecord = (TextView) findViewById(R.id.record);
         countRecord = (TextView) findViewById(R.id.count);
@@ -95,7 +95,7 @@ public class Together_Game extends AppCompatActivity implements SensorEventListe
 
         start_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new JSONTask().execute("http://114.70.234.153:3000/medal");
+                new JSONTask().execute(Constants.IP_ADDRESS + "/medal");
                 startGame();
             }
         });
@@ -106,7 +106,7 @@ public class Together_Game extends AppCompatActivity implements SensorEventListe
                 {//게임 끝나고 종료
                     t_thread.interrupt();
                     Toast.makeText(Together_Game.this, "종료", Toast.LENGTH_SHORT ).show();
-                    new JSONTask().execute("http://114.70.234.153:3000/record");
+                    new JSONTask().execute(Constants.IP_ADDRESS + "/record");
                 }
                 else{//게임 시작 전 종료
                     Toast.makeText(Together_Game.this, "시작 전 나가기", Toast.LENGTH_SHORT ).show();
@@ -123,7 +123,7 @@ public class Together_Game extends AppCompatActivity implements SensorEventListe
     }
 
     public void onBack(View v){
-        new JSONTask().execute("http://114.70.234.153:3000/record");
+        new JSONTask().execute(Constants.IP_ADDRESS + "/record");
     }
 
     void startGame()  {
@@ -172,7 +172,7 @@ public class Together_Game extends AppCompatActivity implements SensorEventListe
                 Result.getInstance().setSave_result_to(Integer.parseInt(Msg));
                 exit_btn.setClickable(true);
                 exit_btn.setVisibility(View.VISIBLE);
-                new JSONTask().execute("http://114.70.234.153:3000/together_result");
+                new JSONTask().execute(Constants.IP_ADDRESS + "/together_result");
 
                 return;
             }

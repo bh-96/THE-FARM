@@ -32,13 +32,13 @@ public class Together_result extends AppCompatActivity {
 
         rst = (ImageView) findViewById(R.id.result);
 
-        new JSONTask().execute("http://114.70.234.153:3000/compare");
+        new JSONTask().execute(Constants.IP_ADDRESS + "/compare");
     }
 
     public void onPause() {
         super.onPause();
 
-        new JSONTask().execute("http://114.70.234.153:3000/save_medal");
+        new JSONTask().execute(Constants.IP_ADDRESS + "/save_medal");
 
         Intent intent = new Intent(getApplicationContext(), Game_menu.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

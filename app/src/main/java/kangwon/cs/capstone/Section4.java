@@ -189,7 +189,7 @@ public class Section4 extends AppCompatActivity {
         super.onStart();
 
         //디비에서 캐릭터 상태 불러오기
-        new JSONTask().execute("http://114.70.234.153:3000/sec4");
+        new JSONTask().execute(Constants.IP_ADDRESS + "/sec4");
 
         //여기에 시간계산넣어주세요~
         startTime = System.currentTimeMillis();
@@ -227,7 +227,7 @@ public class Section4 extends AppCompatActivity {
         startService(intent);
 
         //디비에 캐릭터 상태 저장하기
-        new JSONTask().execute("http://114.70.234.153:3000/save");
+        new JSONTask().execute(Constants.IP_ADDRESS + "/save");
         Log.d("onPause","** Save state **");
     }
 
@@ -254,7 +254,7 @@ public class Section4 extends AppCompatActivity {
                         if(State.getInstance().getStateExperience() >= 300)
                             break;
                         publishProgress();
-                        Thread.sleep(1000);
+                        Thread.sleep(10000);
                     } catch (InterruptedException e) {}
                 }else break;
             }
@@ -288,7 +288,7 @@ public class Section4 extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            //new JSONTask().execute("http://114.70.234.153:3000/delete");
+            //new JSONTask().execute(Constants.IP_ADDRESS + "/delete");
 
             if(State.getInstance().getStateExperience() >= 300) {
 

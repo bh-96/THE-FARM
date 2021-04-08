@@ -33,14 +33,14 @@ public class Together extends AppCompatActivity {
 
         other = (EditText) findViewById(R.id.other);
 
-        new JSONTask().execute("http://114.70.234.153:3000/together");  //wait=4
+        new JSONTask().execute(Constants.IP_ADDRESS + "/together");  //wait=4
     }
 
     @Override
     public void onPause() {
         super.onPause();
 
-        new JSONTask().execute("http://114.70.234.153:3000/main");  //wait=0
+        new JSONTask().execute(Constants.IP_ADDRESS + "/main");  //wait=0
     }
 
     public void onSearch(View v){
@@ -50,7 +50,7 @@ public class Together extends AppCompatActivity {
         if(Other == null || Other.equals("")){
             Toast.makeText(this, "친구 이름을 입력하세요.", Toast.LENGTH_SHORT).show();
         }else{
-            new JSONTask().execute("http://114.70.234.153:3000/other");
+            new JSONTask().execute(Constants.IP_ADDRESS + "/other");
         }
     }
 
@@ -61,7 +61,7 @@ public class Together extends AppCompatActivity {
         if(Other == null || Other.equals("")){
             Toast.makeText(this, "친구 이름을 입력하세요.", Toast.LENGTH_SHORT).show();
         }else{
-            new JSONTask().execute("http://114.70.234.153:3000/go");
+            new JSONTask().execute(Constants.IP_ADDRESS + "/go");
         }
     }
 

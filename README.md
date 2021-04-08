@@ -44,3 +44,29 @@
       - 다른 사용자가 함께 게임하기 수락하면 만보기 게임 진행
       - 먼저 만보기 횟수를 채운 사용자가 승리
       - 승리한 사용자에게 메달 부여
+
+&nbsp;
+
+&nbsp;
+
+### 3. 데이터베이스 테이블 구조
+
+```sql
+create table user
+(
+	num int null comment '캐릭터 종류',
+	name varchar(50) not null comment '캐릭터 이름',
+	wait int default 0 null comment '캐릭터 상태',
+	hunger int null comment '포만감 상태',
+	happiness int null comment '행복 상태',
+	health int null comment '건강 상태',
+	active int null comment 'Active 상태',
+	stress int null comment '스트레스 상태',
+	experience int null comment '경험치 상태',
+	end_time varchar(20) null comment '종료 시간',
+	medal int null comment '획득한 메달 개수',
+	rst_to varchar(20) null comment '미니게임 같이하기 한 상대 캐릭터 이름',
+	result varchar(10) null comment '미니게임 같이하기 우승 결과'
+);
+```
+
